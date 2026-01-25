@@ -30,7 +30,7 @@ The goal of this project is to demonstrate practical QA skills, including writin
 ## Test Cases
 All manual test cases for this project are available in the `Test-Cases` folder:
 
-- [SauceDemo Manual Test Cases PDF](Test-Cases/https://github.com/user-attachments/files/24849330/Saucedemo-Manual-Testing.2.pdf)
+- [SauceDemo Manual Test Cases PDF](https://github.com/user-attachments/files/24849330/Saucedemo-Manual-Testing.2.pdf)
 
 
 > This PDF contains detailed manual test cases covering Login, Products/Cart, and Checkout flows in the SauceDemo application.
