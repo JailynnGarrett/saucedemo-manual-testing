@@ -25,7 +25,8 @@ The goal of this project is to demonstrate practical QA skills, including writin
   - Login functionality  
   - Products page functionality  
   - Cart functionality  
-  - Checkout functionality  
+  - Checkout functionality
+  - Logout funtionality
 
 ## Test Cases
 All manual test cases for this project are available in the `Test-Cases` folder:
@@ -33,7 +34,7 @@ All manual test cases for this project are available in the `Test-Cases` folder:
 - [SauceDemo Manual Test Cases](https://docs.google.com/spreadsheets/d/1I2EtxWGxVf-TNAucUlpxFBMjVZfkBANv5aRP4TvGf5A/edit?gid=0#gid=0)
 
 
-> This PDF contains detailed manual test cases covering Login, Products/Cart, and Checkout flows in the SauceDemo application.
+> This spreadsheet contains detailed manual test cases covering Login, Products/Cart, and Checkout flows in the SauceDemo application.
 
 ## Notes
 - This project was completed as part of hands-on QA learning.  
