@@ -1,0 +1,104 @@
+Test Case ID,Title,Preconditions,Test Steps,Expected Result,Status,Actual Result
+MODULE: LOGIN  https://www.saucedemo.com/,,,,,,
+TC_LOGIN_001,Verify user can Login with valid credentials,User is on the Sauce Demp Login page,"1. Enter a valid username
+2. Enter a valid password
+3. Click the Login button
+",User is successfully logged in and is redirected to the products page,Pass,User is successfully logged in and is redirected to the products page
+TC_LOGIN_002,Verify Login fails with invalid username,User is on the Sauce Demo Login Page ,"1. Enter an invalid username
+2. Enter a valid password
+3. Click the Login button
+",User should get error message on screen indicating invalid credentials,Pass,User should get error message on screen indicating invalid credentials
+TC_LOGIN_003,Verify Login fails with invalid password,User is on the Sauce Demo Login Page ,"1. Enter a valid username
+2. Enter an invalid password
+3. Click the Login button
+",User should get error message on screen indicating invalid credentials,Pass,User should get error message on screen indicating invalid credentials
+TC_LOGIN_004,Verify Login fails when username field is empty,User is on the Sauce Demo Login Page,"1. Leave username text field empty
+2. Enter a valid password
+3. Click the Login button
+",User should get error message on screen indicating invalid credentials,Pass,User should get error message on screen indicating invalid credentials
+TC_LOGIN_005,"Verify Login fails when password field is empty",User is on the Sauce Demo Login Page,"1. Enter valid username
+2. Leave password text field empty
+3. Click the Login button
+",User should get error message on screen indicating invalid credentials,Pass,User should get error message on screen indicating invalid credentials
+,,,,,,
+MODULE: PRODUCTS PAGE https://www.saucedemo.com/inventory.html,,,,,,
+TC_PROD_001,Verify products are added to cart when selected,Successfully login to Sauce Demo and be redirected to products page,"1. Add an item to cart
+2. Verify item appears in cart
+3. Verify price displayed on product is the same as price in cart
+","Products added to cart from product page should appear in the shopping cart
+",Pass,Products added to cart from product page should appear in the shopping cart
+TC_PROD_002,"Verify cart displays fixed quantities for items added",Successfully login to Sauce Demo and be redirected to products page,"1. Click “add to cart” on one or more product items
+2. Click the Cart icon to be redirected to cart page
+3. Observe quantity display of cart items
+4. Attempt to modify quantity of item
+","Products in cart should all display a quantity of “1”. Quantity cannot be modified.
+",Pass,Products in cart should all display a quantity of “1”. Quantity cannot be modified.
+TC_PROD_003,"Verify products in cart remain in cart when website is refreshed",Successfully login to Sauce Demo and be redirected to products page,"1. Click “add to cart” on one or more product items
+2. Refresh webpage
+","Products added to cart should still be in cart after website is refreshed
+",Pass,Products added to cart should still be in cart after website is refreshed
+TC_PROD_004,"Verify products in product page can be clicked for additional photos and details",Successfully login to Sauce Demo and be redirected to products page,"1. Select product from product page
+2. Verify redirection to specific product page
+3. Verify the product details are accurate to the product you selected
+",User is redirected to new page giving product images and details,Pass,User is redirected to new page giving product images and details
+TC_PROD_005,Verify products can be removed from cart,Successfully login to Sauce Demo and be redirected to products page,"1. Click “add to cart” on one or more product items
+2. Click the Cart icon to be redirected to cart page
+3. Remove products from cart with Remove button
+","Products that were added to cart are no longer there
+
+",Pass,Products that were added to cart are no longer there
+TC_PROD_006,"Verify checkout is disabled when cart is empty",Successfully login to Sauce Demo and be redirected to products page,"1. Empty cart of all products
+2. Select cart button
+3. Verify users cannot click the checkout button when the cart is empty
+","Checkout button should be disabled when the cart is empty
+",Pass,Checkout button should be disabled when the cart is empty
+TC_PROD_007,Verify the product sorting buttons will correctly sort the product items,Successfully login to Sauce Demo and be redirected to products page,"1. Use the product sort button to sort products 
+2. Look at products to confirm products are sorted in the order requested 
+3. Use all sort options to confirm
+","Products should be sorted in each option correctly
+",Pass,Products should be sorted in each option correctly
+TC_PROD_008," Verify all products are visible and available on Product page",Successfully login to Sauce Demo and be redirected to products page,"1. Observe all product items listed on the Products page
+2. Count the number of products displayed
+3. Verify that each expected product is listed and selectable
+","All products should be visible on Product page and can be Added to the Cart
+",Pass,All products should be visible on Product page and can be Added to the Cart
+TC_PROD_009,"Verify product descriptions are accurate ",Successfully login to Sauce Demo and be redirected to products page,"1. Observe the description for each product listed on the Products page
+2. Click on a product to navigate to the product details page
+3. Verify that the product description on the details page matches the description on the Products page
+",Product descriptions are displayed and consistent across the Products page and product details page,Pass,Product descriptions are displayed and consistent across the Products page and product details page
+TC_PROD_010,Verify product pricing display is accurate,Successfully login to Sauce Demo and be redirected to products page,"1. Observe the price displayed for each product on the Products page
+2. Click on a product to navigate to the product details page
+3. Verify that the price displayed on the product details page matches the price shown on the Products page
+","Product pricing is visible and consistent on Products page and product detail page
+",Pass,Product pricing is visible and consistent on Products page and product detail page
+,,,,,,
+MODULE: CART/CHECKOUT https://www.saucedemo.com/checkout-step-one.html,,,,,,
+"TC_CART_001
+","Verify user can checkout with valid first name, last name, and zip code","Successfully login to Sauce Demo, add items to cart and proceed to checkout  
+","1. Enter valid first name, last name, and zip code
+2. Select “continue”
+","User should be able to proceed to the checkout overview
+",Pass,User should be able to proceed to the checkout overview
+TC_CART_002,Verify error message when leaving first name text box blank,"Successfully login to Sauce Demo, add items to cart and proceed to checkout","1. Leave First name box empty
+2. Enter valid last name 
+3. Enter valid zip code
+4. Select continue
+",Error message is displayed on screen indicating the required field is missing. User cannot proceed until the field is completed.,Pass,Error message is displayed on screen indicating the required field is missing. User cannot proceed until the field is completed.
+TC_CART_003,Verify error message when leaving last name text box blank,"Successfully login to Sauce Demo, add items to cart and proceed to checkout","1. Enter valid first name
+2. Leave last name text box empty
+3. Enter valid zip code
+4. Select continue
+","Error message is displayed on screen indicating the required field is missing. User cannot proceed until the field is completed.",Pass,"Error message is displayed on screen indicating the required field is missing. User cannot proceed until the field is completed."
+TC_CART_004,Verify error message when leaving zipcode text box blank,"Successfully login to Sauce Demo, add items to cart and proceed to checkout","1. Enter valid first name
+2. Enter valid last name
+3. Leave zipcode text box blank
+4. Select continue
+","Error message is displayed on screen indicating the required field is missing. User cannot proceed until the field is completed.",Pass,"Error message is displayed on screen indicating the required field is missing. User cannot proceed until the field is completed."
+TC_CART_005,Verify price total is accurate,"Successfully login to Sauce Demo, add items to cart and proceed to checkout. Enter valid information for first and last name, and zipcode. Select continue button","1. Add total price of items in cart
+2. Verify that total price matches
+",Total price should be accurate,Pass,Total price should be accurate
+,,,,,,
+MODULE: LOGOUT https://www.saucedemo.com/inventory.html,,,,,,
+TC_LOGOUT_001,Verify user can Logout of session,Succesfully Login to Sauce Demo,"1. Select Menu tab in upper left corner of application
+2. Select “Logout” button
+",User should be successfully Logged out of their session,Pass,User should be successfully Logged out of their session
